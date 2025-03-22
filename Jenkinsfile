@@ -5,7 +5,7 @@ stage('CodeScan'){
     steps{
         sh 'trivy fs . -o result.html'
         sh 'cat result.html'
-        
+        sh'uname -r'
     }
 }
 stage('dockerLogin') {
